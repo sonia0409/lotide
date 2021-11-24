@@ -8,7 +8,6 @@ const assertEqual = function (actual, expected) {
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
   for (const item of allItems) {
-    console.log(item);
     if (itemsToCount[item]) {
     // inside the loop, 
     // increment the counter for each item:
@@ -24,10 +23,6 @@ const countOnly = function(allItems, itemsToCount) {
 
   return results;
 }
-
-
-
-
 
 //TEST CODE
 const firstNames = [
