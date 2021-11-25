@@ -1,15 +1,18 @@
 // FUNCTION IMPLEMENTATION
-const assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function(actual, expected) {
   let output = true;
+  if(actual.length !== expected.length){
+    return false;
+  }
   //compare each element of both the arrays- iterate.
-  for(let i = 0; i < arr1.length; i++){
-    if(arr1[i] !== arr2[i]){
+  for(let i = 0; i < actual.length; i++){
+    if(actual[i] !== expected[i]){
       output = false;
     }
   }
   if (output) {
-    console.log(`\u2705 Assertion Passed: ${arr1} === ${arr2}`);
-  } else console.log(`\u274C Assertion Failed: ${arr1} !== ${arr2}`);
+    console.log(`\u2705 Assertion Passed: ${actual} === ${expected}`);
+  } else console.log(`\u274C Assertion Failed: ${actual} === ${expected}`);
 };
 
 // TEST CODE
