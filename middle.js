@@ -1,31 +1,4 @@
 // FUNCTION IMPLEMENTATION
-const assertArraysEqual = function(arr1, arr2) {
-  let output = true;
-  //compare each element of both the arrays- iterate.
-  for(let i = 0; i < arr1.length; i++){
-    if(arr1[i] !== arr2[i]){
-      output = false;
-    }
-  }
-  if (output) {
-    console.log(`\u2705 Assertion Passed: ${arr1} === ${arr2}`);
-  } else console.log(`\u274C Assertion Failed: ${arr1} !== ${arr2}`);
-};
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`\u2705 Assertion Passed ${actual} === ${expected}`);
-  } else console.log(`\u274C Assertion Failed: ${actual} !== ${expected}`);
-};
-const eqArrays = function(arr1, arr2) {
-  let output = true;
-  //compare each element of both the arrays- iterate.
-  for(let i = 0; i < arr1.length; i++){
-    if(arr1[i] !== arr2[i]){
-      output = false;
-    }
-  }
-return output;
-}
 //create a new function- middle-input-array
 //odd number of elements - return an arry of single element.
 //for even return two elements
@@ -42,15 +15,8 @@ if(arr.length > 2){
     output = arr.splice(midIndex-1,2)
   }
 }
-console.log(output);
+return output;
 }
 
+module.exports = middle;
 
-
-// TEST CODE
-middle([1, 2, 3]) // => [2]
-middle([1, 2, 3, 4, 5]) // => [3]
-middle([1, 2, 3, 4]) // => [2, 3]
-middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
-middle([1]) // => []
-middle([1, 2]) // => []
